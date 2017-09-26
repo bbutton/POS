@@ -12,6 +12,10 @@ public class POS {
     }
 
     public void scanItem(int itemCode) {
-        display.displayPrice("1.99");
+        if(itemCode == 1)
+            display.displayPrice("1.99");
+        else if(itemCode == 6) {
+            display.displayPrice("2.99");
+        }
     }
 }
