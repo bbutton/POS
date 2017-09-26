@@ -12,10 +12,9 @@ public class POS {
     }
 
     public void scanItem(int itemCode) {
-        if(itemCode == 1)
-            display.displayPrice("1.99");
-        else if(itemCode == 6) {
-            display.displayPrice("2.99");
-        }
+        PriceList priceList = new PriceList();
+        String price = priceList.lookup(itemCode);
+
+        display.displayPrice(price);
     }
 }
