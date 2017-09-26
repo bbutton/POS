@@ -2,6 +2,7 @@ package tests;
 
 import main.MockDisplay;
 import main.POS;
+import main.PriceList;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -12,7 +13,8 @@ public class POSTest {
     @Test
     public void priceDisplayedWhenScanningSingleItem() {
         MockDisplay display = new MockDisplay();
-        POS pos = new POS(display);
+        PriceList priceList = new PriceList();
+        POS pos = new POS(display, priceList);
 
         int itemCode = 1;
         pos.scanItem(itemCode);
@@ -23,7 +25,8 @@ public class POSTest {
     @Test
     public void priceDisplayedWhenScanningDifferentItem() {
         MockDisplay display = new MockDisplay();
-        POS pos = new POS(display);
+        PriceList priceList = new PriceList();
+        POS pos = new POS(display, priceList);
 
         int itemCode = 6;
         pos.scanItem(itemCode);

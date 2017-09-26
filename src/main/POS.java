@@ -5,14 +5,15 @@ package main;
  */
 public class POS {
     private Display display;
+    private PriceList priceList;
 
-    public POS(Display display) {
+    public POS(Display display, PriceList priceList) {
 
         this.display = display;
+        this.priceList = priceList;
     }
 
     public void scanItem(int itemCode) {
-        PriceList priceList = new PriceList();
         String price = priceList.lookup(itemCode);
 
         display.displayPrice(price);
