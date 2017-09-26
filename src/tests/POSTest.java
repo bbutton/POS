@@ -13,7 +13,7 @@ public class POSTest {
     @Test
     public void priceDisplayedWhenScanningSingleItem() {
         MockDisplay display = new MockDisplay();
-        PriceList priceList = new PriceList();
+        PriceList priceList = new MockPriceList();
         POS pos = new POS(display, priceList);
 
         int itemCode = 1;
@@ -25,7 +25,7 @@ public class POSTest {
     @Test
     public void priceDisplayedWhenScanningDifferentItem() {
         MockDisplay display = new MockDisplay();
-        PriceList priceList = new PriceList();
+        PriceList priceList = new MockPriceList();
         POS pos = new POS(display, priceList);
 
         int itemCode = 6;
