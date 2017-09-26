@@ -19,4 +19,15 @@ public class POSTest {
 
         assertEquals("1.99", display.getPrice());
     }
+
+    @Test
+    public void priceDisplayedWhenScanningDifferentItem() {
+        Display display = new Display();
+        POS pos = new POS(display);
+
+        int itemCode = 6;
+        pos.scanItem(itemCode);
+
+        assertEquals("2.99", display.getPrice());
+    }
 }
