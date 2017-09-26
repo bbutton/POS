@@ -9,4 +9,8 @@ public class Display {
     public String getPrice() {
         return price;
     }
+
+    public void displayPrice(String price) {
+        this.price = price;
+    }
 }
