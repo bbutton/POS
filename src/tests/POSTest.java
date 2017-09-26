@@ -1,6 +1,5 @@
 package tests;
 
-import main.MockDisplay;
 import main.POS;
 import main.PriceList;
 import org.junit.Test;

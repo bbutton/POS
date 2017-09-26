@@ -1,4 +1,6 @@
-package main;
+package tests;
+
+import main.Display;
 
 /**
  * Created by bbutton on 9/26/17.
