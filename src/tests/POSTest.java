@@ -1,6 +1,6 @@
 package tests;
 
-import main.Display;
+import main.MockDisplay;
 import main.POS;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class POSTest {
     @Test
     public void priceDisplayedWhenScanningSingleItem() {
-        Display display = new Display();
+        MockDisplay display = new MockDisplay();
         POS pos = new POS(display);
 
         int itemCode = 1;
@@ -22,7 +22,7 @@ public class POSTest {
 
     @Test
     public void priceDisplayedWhenScanningDifferentItem() {
-        Display display = new Display();
+        MockDisplay display = new MockDisplay();
         POS pos = new POS(display);
 
         int itemCode = 6;
