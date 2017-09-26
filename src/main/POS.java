@@ -4,9 +4,9 @@ package main;
  * Created by bbutton on 9/26/17.
  */
 public class POS {
-    private MockDisplay display;
+    private Display display;
 
-    public POS(MockDisplay display) {
+    public POS(Display display) {
 
         this.display = display;
     }
